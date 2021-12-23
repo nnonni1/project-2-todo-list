@@ -10,6 +10,24 @@ app.get('/',(req,res)=>{
     res.json('GET/is Working')
 })
 
+  //الكويري بارمز ,نحط اسم الرابط واستفهام بعدين الشرط
+  //  filter?isComplete=true || filter?isComplete=false
+app.get('/filter',(req,res)=>{
+    console.log(req.query);
+ Todo.find({isCompleted: req.query.isCompleted },(err,data)=>{
+if(err){
+ console.log('ERR',err);
+}else{
+  console.log(data);
+  res.json(data)
+}
+
+})
+
+})
+
+
+
 
 app.get('/tasks',(req,res)=>{
 
