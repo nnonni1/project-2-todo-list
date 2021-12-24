@@ -1,0 +1,11 @@
+.app {
+ border:red solid 5 px;
+ text-align: center;
+
+}
+
+.todo {
+  text-align: center;
+ border: blue solid 3 px;
+ 
+}
