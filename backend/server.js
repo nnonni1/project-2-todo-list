@@ -2,8 +2,10 @@ const express=require('express')
 const app=express()
 const db=require('./db')
 const Todo=require('./todo')
+const cors= require('cors')
 //console.log(Todo);
 app.use(express.json())
+app.use(cors())
 
 app.get('/',(req,res)=>{
 
@@ -53,7 +55,7 @@ if(err){
 app.put('/tasks/:id/:isCompleted',(req,res)=>{
       console.log(' 124 :',req.params);
 Todo.updateOne(
-   {_id: req.params.id},
+   { _id: req.params.id},
   {isCompleted: req.params.isCompleted},
   (err, updateObj)=>{         
   if(err){ 

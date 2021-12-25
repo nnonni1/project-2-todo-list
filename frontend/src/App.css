@@ -1,11 +1,20 @@
 .app {
- border:red solid 5 px;
+ border:red solid 5px;
  text-align: center;
 
 }
 
 .todo {
-  text-align: center;
- border: blue solid 3 px;
+ border:blue solid 3px;
+ 
+}
+
+.todo span{
+margin: 0px 10px 0px 10px;
+
+}
+
+.add {
+ border:green solid 3px;
  
 }
