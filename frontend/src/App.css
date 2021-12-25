@@ -2,22 +2,27 @@
  
  text-align: center;
  margin: 30px;
-}
-
-.todo {
- border:blue solid 3px;
  
 }
 
+.todo {
+ border:  rgba(67, 101, 104, 0.623) solid 2px;
+ font-family: initial;
+
+}
+
 .todo span{
-margin: 0px 10px 0px 10px;
+font-family: initial;
+font-weight: bold;
+margin: 0px 0px 0px 10px;
 
 }
 
 
 .add {
- border:green solid 3px;
- 
+ border: rgb(215, 216, 155) solid 2px;
+ font-family: initial;
+ font-weight: bold;
 }
 
 
@@ -30,16 +35,29 @@ div{
    justify-content: center;
     background-color: white;
     justify-content: center;
-    margin: 40px 40px 0px 40px; 
     border: rgba(67, 101, 104, 0.623) solid 2px ; 
-  
+    margin: 40px 40px 40px 40px; 
+
 }
 
 button{
   background-color:rgba(59, 164, 172, 0.623);
-  
+  font-weight: bold;
+  color:white;
+  margin: 3px ;
+  border-color: rgba(59, 164, 172, 0.623);
 }
 
-h2{
+h1{
   font-family: initial;
+}
+
+input{
+  font-family: initial;
+
+}
+
+.style{
+  height: 50px;
+
 }
