@@ -49,10 +49,30 @@ const postNewTodo= (body)=> {
 
 };
  
-
+const deleteTodo= (id)=> {
+  // {"title":"task 1","isCompleted":false}
+ 
+   axios
+   //نستخدم الشرطة فوق "حرف ذ"عشان يكون اد متغير
+   .delete(`http://localhost:5000/tasks/${id}`)
+   .then((response) =>{
+   // console.log('RESPONSE: ', response);
+    console.log('DATA: ', response.data);
+    //setTasks(response.data)
+    getData()
+   })
+   .catch((err) =>{
+   console.log("ERR: ", err);
+   
+ 
+ });
+ 
+ };
+  
+ 
 
   const mapOverTasks = tasks.map((taskObj, i) => ( 
-  <Todo key={i} task={taskObj} />  
+  <Todo key={i} task={taskObj} deleteTodo={deleteTodo} />  
   
 
   ));
@@ -61,7 +81,7 @@ const postNewTodo= (body)=> {
 return (
 <div className="app">
 
-  <p>app</p>
+  <h2>TO DO List</h2>
   <Add createFunc={postNewTodo}/>
   <button onClick={getData}>Get Task </button>
   {mapOverTasks}

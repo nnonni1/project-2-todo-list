@@ -1,7 +1,7 @@
 .app {
- border:red solid 5px;
+ 
  text-align: center;
-
+ margin: 30px;
 }
 
 .todo {
@@ -14,7 +14,32 @@ margin: 0px 10px 0px 10px;
 
 }
 
+
 .add {
  border:green solid 3px;
  
+}
+
+
+body{
+  background-image:url('https://i.pinimg.com/564x/1a/00/63/1a00631a59fb9d8b6007ad76089fe4a5.jpg') ;
+}
+
+div{
+  
+   justify-content: center;
+    background-color: white;
+    justify-content: center;
+    margin: 40px 40px 0px 40px; 
+    border: rgba(67, 101, 104, 0.623) solid 2px ; 
+  
+}
+
+button{
+  background-color:rgba(59, 164, 172, 0.623);
+  
+}
+
+h2{
+  font-family: initial;
 }
