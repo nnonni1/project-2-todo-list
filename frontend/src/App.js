@@ -4,6 +4,8 @@ import { useState } from 'react';
 import axios from 'axios';
 import Todo from './components/Todo';
 import Add from './components/Add';
+import Register from './components/Register';
+
 
 export default function App() {
 
@@ -149,6 +151,8 @@ return (
 
   <Add createFunc={postNewTodo}/>
   {mapOverTasks}
+
+<Register/>
 
 
 </div>

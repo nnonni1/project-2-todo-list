@@ -110,7 +110,7 @@ if(err){
        console.log('ERROR: ',err)
        res.status(400).json({message:'this email alrady taken'})
   }else{
-       res.status(201).json(newUser);
+       res.status(201).json('creatr New User Succssfuly');
    }
     });
    });

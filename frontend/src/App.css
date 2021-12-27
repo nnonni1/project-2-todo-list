@@ -59,5 +59,16 @@ input{
 
 .style{
   height: 50px;
+}
+
+
+.login{
+  border: blue solid 2px ; 
+
+}
+
+.register{
+
+  border: green solid 2px ; 
 
 }
