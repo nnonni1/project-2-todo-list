@@ -3,6 +3,10 @@ const app=express()
 const db=require('./db')
 const Todo=require('./todo')
 const cors= require('cors')
+const User= require('./user')
+
+
+
 //console.log(Todo);
 app.use(express.json())
 app.use(cors())
@@ -99,6 +103,48 @@ if(err){
  });
 
  
+ app.post('/user/register',(req,res)=>{
+  User.create(req.body,(err,newUser)=>{
+       
+  if(err){
+       console.log('ERROR: ',err)
+       res.status(400).json({message:'this email alrady taken'})
+  }else{
+       res.status(201).json(newUser);
+   }
+    });
+   });
+  
+
+   app.post('/user/login',(req,res)=>{
+    User.find({email:req.body.email},(err, arrUserFound)=>{
+         
+    if(err){
+         console.log('ERROR: ',err)
+    }else{
+      //console.log(data);
+
+      if(arrUserFound.length === 1){
+        //we found the user
+      if(req.body.password=== arrUserFound[0].password){
+        res.status(200)
+        .json({
+          message:"login Seccssfuly",
+          username: arrUserFound[0].username,
+        });
+        } else{
+          res.status(400).json({message:"Wrong password"})}
+   }else{
+        res.status(404).json({
+          message:"The email entered is not registerd"
+      })
+      }
+     } // res.json(data);
+     
+      });
+     });
+   
+
 
  app.delete('/tasks/:id',(req,res)=>{
     console.log('37:',req.params.id)

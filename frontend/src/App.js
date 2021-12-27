@@ -132,9 +132,7 @@ const toggleTodo= (id,newStatus)=> {
   deleteTodo={deleteTodo}
   toggleTodo={toggleTodo} />  
   
-
   ));
-
 
 return (
 <div className="app">
